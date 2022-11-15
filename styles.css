@@ -1,3 +1,4 @@
+/* General */
 :root {
     --white: #FFFFFF;
     --black: #000000;
@@ -16,6 +17,8 @@ body {
 .inactive {
     display: none;
 }
+
+/* navbar (General) */
 nav {
     display: flex;
     justify-content: space-between;
@@ -79,6 +82,7 @@ nav {
     justify-content: center;
 }
 
+/* Menu en Desktop */
 .desktop-menu {
     position: absolute;
     top: 60px;
@@ -117,6 +121,44 @@ nav {
     display: inline-block;
 }
 
+/* Menu en mobile */
+.mobile-menu {
+    position: absolute;
+    top: 60px;
+    width: 200px;
+    height: auto;
+    font-weight: bold;
+}
+.mobile-menu ul{
+    list-style: none;
+    padding: 20px;
+}
+.mobile-menu ul:nth-child(3){
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 20px;
+}
+
+.mobile-menu ul li{
+    margin: 20px;
+}
+.mobile-menu ul:nth-child(3) li{
+    margin: 0 20px;
+}
+
+.mobile-menu ul li a {
+    text-decoration: none;
+    font-size: var(--lg);
+    color: var(--black);
+}
+.mobile-menu ul:nth-child(3) li a{
+    font-size: var(--sm);
+    font-weight: normal;
+    
+}
+.mobile-menu ul li .sign-out{
+    color: var(--hospital-green);
+}
 
 @media (max-width: 640px) {
     .menu {
@@ -126,6 +168,15 @@ nav {
         display: none;
     }
     .navbar-email {
+        display: none;
+    }
+    .desktop-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 641px) {
+    .mobile-menu {
         display: none;
     }
 }
